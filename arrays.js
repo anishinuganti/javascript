@@ -31,5 +31,16 @@ const products = [
 
 console.log(getElectronicsSorted(products));
 
-//task 3
+// //task 3
 
+const students = [
+  { name: "Anish", score: 80 },
+  { name: "Rahul", score: 60 },
+  { name: "Priya", score: 90 },
+  { name: "Kiran", score: 70 }
+];
+
+const avg=students.reduce((acc,c)=>acc=(acc+c.score),0)/students.length
+
+const ts=students.filter(s=>s.score>avg).map(s=>s.name)
+console.log(ts)
